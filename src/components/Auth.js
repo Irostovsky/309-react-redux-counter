@@ -6,15 +6,9 @@ const Auth = () => {
   const dispatch = useDispatch();
   const submitHandler = (event) => {
     event.preventDefault();
-    const email = event.target.email.value;
-    const password = event.target.password.value;
-
-    if (email === "test@test.com" && password === "test") {
-      dispatch(authActions.login());
-    } else {
-      console.log("Invalid credentials!");
-    }
+    dispatch(authActions.login());
   };
+
   return (
     <main className={classes.auth}>
       <section>
